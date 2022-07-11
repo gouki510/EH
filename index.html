@@ -225,6 +225,6 @@ document.getElementById('stopNotifications').addEventListener('touchend', functi
 });
 </script>
 <!--csv保存ボタンを作成　insert nameを入力してからじゃないと動かない-->
-<button id="csv_download" class="button" touchend="download(make_csv(Time_array,Voltage_array,Ax_array,Ay_array,Az_array,Gx_array,Gy_array,Gz_array),filename)">csv Download</button> 
+<button id="csv_download" class="button" onclick="download(make_csv(Time_array,Voltage_array,Ax_array,Ay_array,Az_array,Gx_array,Gy_array,Gz_array),filename)">csv Download</button> 
 </body>
 </html>
