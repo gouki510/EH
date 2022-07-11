@@ -218,6 +218,7 @@ ble.onStopNotify = function(uuid){
 //ボタンが押された時のイベント登録
 //--------------------------------------------------
 document.getElementById('startNotifications').addEventListener('touchend', function() {
+      alert("touched!");
       ble.startNotify('UUID1');
 });
 
