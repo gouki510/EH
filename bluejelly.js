@@ -259,6 +259,7 @@ BlueJelly.prototype.reset= function() {
 
 //myutil
 function download(content,filename){
+  alert("csv download");
   const a = document.createElement("a");
   document.body.appendChild(a);
   a.style = "display:none";
