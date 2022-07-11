@@ -217,11 +217,11 @@ ble.onStopNotify = function(uuid){
 //-------------------------------------------------
 //ボタンが押された時のイベント登録
 //--------------------------------------------------
-document.getElementById('startNotifications').addEventListener('click', function() {
+document.getElementById('startNotifications').addEventListener('touchend', function() {
       ble.startNotify('UUID1');
 });
 
-document.getElementById('stopNotifications').addEventListener('click', function() {
+document.getElementById('stopNotifications').addEventListener('touchend', function() {
       ble.stopNotify('UUID1');
 });
 </script>
