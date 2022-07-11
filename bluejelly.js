@@ -172,6 +172,7 @@ BlueJelly.prototype.write = function(uuid, array_value) {
 //startNotify
 //--------------------------------------------------
 BlueJelly.prototype.startNotify = function(uuid) {
+  alert("start");
   return (this.scan(uuid))
   .then( () => {
     return this.connectGATT(uuid);
