@@ -121,6 +121,7 @@ BlueJelly.prototype.connectGATT = function(uuid) {
 //--------------------------------------------------
 BlueJelly.prototype.dataChanged = function(self, uuid) {
   return function(event) {
+    alert(event);
     self.onRead(event.target.value, uuid);
   }
 }
