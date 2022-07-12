@@ -272,7 +272,7 @@ function download(content,filename){
   a.parentNode.removeChild(a); // delete the temporary "a" element
 }
 
-function make_csv(array1,array2,array3,array4,array5,array6,array7,array8){
+function make_csv(array1,array2,array3,array4,array5){
   var length = array1.length;
   var str = "";
   for (var i =-1;i<length;i++){
@@ -280,7 +280,7 @@ function make_csv(array1,array2,array3,array4,array5,array6,array7,array8){
       str += "Time[s],Power[mW],Ax,Ay,Az,Gx,Gy,Gz\n";
       continue;
     }
-      str += String(array1[i]) + "," + String(array2[i])+"," + String(array3[i])+"," + String(array4[i])+"," + String(array5[i])+"," + String(array6[i])+"," + String(array7[i])+"," + String(array8[i])+"\n";
+      str += String(array1[i]) + "," + String(array2[i])+"," + String(array3[i])+"," + String(array4[i])+"," + String(array5[i])+"\n";
   }
   return str;
 }

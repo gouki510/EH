@@ -165,17 +165,17 @@ ble.onRead = function (data, uuid){
   Ax_array.push(ax);
   Ay_array.push(ay);
   Az_array.push(az);
-  Gx_array.push(gx);
+  /*Gx_array.push(gx);
   Gy_array.push(gy);
-  Gz_array.push(gz);
+  Gz_array.push(gz);*/
   //HTMLにデータを表示
   document.getElementById('Voltage').innerHTML = voltage;
   document.getElementById('ax').innerHTML = "ax : "+ ax;
   document.getElementById('ay').innerHTML = ", ay : "+ ay;
   document.getElementById('az').innerHTML = ", az : "+ az;
-  document.getElementById('gx').innerHTML = "gx : "+ gx;
+  /*document.getElementById('gx').innerHTML = "gx : "+ gx;
   document.getElementById('gy').innerHTML = ", gy : "+ gy;
-  document.getElementById('gz').innerHTML = ", gz : "+ gz;
+  document.getElementById('gz').innerHTML = ", gz : "+ gz;*/
   document.getElementById('uuid_name').innerHTML = uuid;
   document.getElementById('status').innerHTML = "status : read data"
 
@@ -223,6 +223,6 @@ document.getElementById('stopNotifications').addEventListener('touchend', functi
 });
 </script>
 <!--csv保存ボタンを作成　insert nameを入力してからじゃないと動かない-->
-<button id="csv_download" class="button" onclick="download(make_csv(Time_array,Voltage_array,Ax_array,Ay_array,Az_array,Gx_array,Gy_array,Gz_array),filename)">csv Download</button> 
+<button id="csv_download" class="button" onclick="download(make_csv(Time_array,Voltage_array,Ax_array,Ay_array,Az_array),filename)">csv Download</button> 
 </body>
 </html>
