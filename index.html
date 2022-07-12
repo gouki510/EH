@@ -28,7 +28,7 @@ Copyright 2017-2020 JellyWare Inc. All Rights Reserved.
         <label> Insert filename</label>
         <input type="text" id="file_name">  
         <hr>
-        <canvas id="chart" width="500" height="320"></canvas>
+        <!--- <canvas id="chart" width="500" height="320"></canvas> !--->
         <div id="device_name"> </div>
         <div id="uuid_name"> </div>
         <h3>Power[mW]:</h3>
@@ -57,7 +57,7 @@ Copyright 2017-2020 JellyWare Inc. All Rights Reserved.
 const ble = new BlueJelly();
 
 //TimeSeriesのインスタンス生成
-const ble_data = new TimeSeries();
+//const ble_data = new TimeSeries();
 
 //csv保存用配列
 var Time_array = [];
@@ -82,7 +82,7 @@ var filename = "";
 //-------------------------------------------------
 //smoothie.js
 //-------------------------------------------------
-function createTimeline() {
+/*function createTimeline() {
     const chart = new SmoothieChart({
         millisPerPixel: 20,
         grid: {
@@ -99,7 +99,7 @@ function createTimeline() {
         lineWidth: 4
     });
     chart.streamTo(document.getElementById("chart"), 500);
-}
+}*/
 
 
 //--------------------------------------------------
@@ -180,7 +180,7 @@ ble.onRead = function (data, uuid){
   document.getElementById('status').innerHTML = "status : read data"
 
   //グラフへ反映
-  ble_data.append(new Date().getTime(), voltage);
+  //ble_data.append(new Date().getTime(), voltage);
 
   
 }
