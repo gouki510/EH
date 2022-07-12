@@ -157,9 +157,9 @@ ble.onRead = function (data, uuid){
   ax = data.getFloat32(4,true);
   ay = data.getFloat32(8,true);
   az = data.getFloat32(12,true);
-  gx = data.getFloat32(16,true);
-  gy = data.getFloat32(20,true);
-  gz = data.getFloat32(24,true);
+  //gx = data.getFloat32(16,true);
+  //gy = data.getFloat32(20,true);
+  //gz = data.getFloat32(24,true);
   Time_array.push(tmpTime);
   Voltage_array.push(voltage);
   Ax_array.push(ax);
