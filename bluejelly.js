@@ -277,7 +277,7 @@ function make_csv(array1,array2,array3,array4,array5){
   var str = "";
   for (var i =-1;i<length;i++){
     if(i==-1){
-      str += "Time[s],Power[mW],Ax,Ay,Az,Gx,Gy,Gz\n";
+      str += "Time[s],Power[mW],Ax,Ay,Az\n";
       continue;
     }
       str += String(array1[i]) + "," + String(array2[i])+"," + String(array3[i])+"," + String(array4[i])+"," + String(array5[i])+"\n";
