@@ -18,7 +18,7 @@ Copyright 2017-2020 JellyWare Inc. All Rights Reserved.
 <body>
 <div class="container">
     <div class="title margin">
-        <p id="title">power measurement</p>
+        <p id="title">Power measurement</p>
         <p id="subtitle">power graph</p>
     </div>
 
@@ -152,6 +152,7 @@ ble.onRead = function (data, uuid){
   else{
     tmpTime = (performance.now() - startTime)/1000; 
   }
+  alert("data",data);
   // arduinoから値を取得
   voltage = data.getFloat32(0,true).toFixed(2);
   ax = data.getFloat32(4,true).toFixed(2);
@@ -160,7 +161,6 @@ ble.onRead = function (data, uuid){
   gx = data.getFloat32(16,true).toFixed(2);
   gy = data.getFloat32(20,true).toFixed(2);
   gz = data.getFloat32(24,true).toFixed(2);
-  alert("data");
   //HTMLにデータを表示
   document.getElementById('Voltage').innerHTML = voltage;
   document.getElementById('ax').innerHTML = "ax : "+ ax;
