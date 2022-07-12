@@ -160,6 +160,14 @@ ble.onRead = function (data, uuid){
   gx = data.getFloat32(16,true);
   gy = data.getFloat32(20,true);
   gz = data.getFloat32(24,true);
+  Time_array.push(tmpTime);
+  Voltage_array.push(voltage);
+  Ax_array.push(ax);
+  Ay_array.push(ay);
+  Az_array.push(az);
+  Gx_array.push(gx);
+  Gy_array.push(gy);
+  Gz_array.push(gz);
   //HTMLにデータを表示
   document.getElementById('Voltage').innerHTML = voltage;
   document.getElementById('ax').innerHTML = "ax : "+ ax;
@@ -174,15 +182,6 @@ ble.onRead = function (data, uuid){
   //グラフへ反映
   ble_data.append(new Date().getTime(), voltage);
 
-  //arrayにpush
-  Time_array.push(tmpTime);
-  Voltage_array.push(voltage);
-  Ax_array.push(ax);
-  Ay_array.push(ay);
-  Az_array.push(az);
-  Gx_array.push(gx);
-  Gy_array.push(gy);
-  Gz_array.push(gz);
   
 }
 
