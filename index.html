@@ -152,15 +152,15 @@ ble.onRead = function (data, uuid){
   else{
     tmpTime = (performance.now() - startTime)/1000; 
   }
-  alert(data.getFloat32(0,true))
   // arduinoから値を取得
-  voltage = data.getFloat32(0,true).toFixed(2);
-  ax = data.getFloat32(4,true).toFixed(2);
-  ay = data.getFloat32(8,true).toFixed(2);
-  az = data.getFloat32(12,true).toFixed(2);
-  gx = data.getFloat32(16,true).toFixed(2);
-  gy = data.getFloat32(20,true).toFixed(2);
-  gz = data.getFloat32(24,true).toFixed(2);
+  voltage = data.getFloat32(0,true);
+  ax = data.getFloat32(4,true);
+  ay = data.getFloat32(8,true);
+  az = data.getFloat32(12,true);
+  gx = data.getFloat32(16,true);
+  gy = data.getFloat32(20,true);
+  gz = data.getFloat32(24,true);
+  alert(voltage);
   //HTMLにデータを表示
   document.getElementById('Voltage').innerHTML = voltage;
   document.getElementById('ax').innerHTML = "ax : "+ ax;
