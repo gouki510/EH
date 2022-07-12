@@ -160,7 +160,6 @@ ble.onRead = function (data, uuid){
   gx = data.getFloat32(16,true);
   gy = data.getFloat32(20,true);
   gz = data.getFloat32(24,true);
-  alert(voltage);
   //HTMLにデータを表示
   document.getElementById('Voltage').innerHTML = voltage;
   document.getElementById('ax').innerHTML = "ax : "+ ax;
