@@ -152,7 +152,6 @@ ble.onRead = function (data, uuid){
   else{
     tmpTime = (performance.now() - startTime)/1000; 
   }
-  alert(data);
   // arduinoから値を取得
   voltage = data.getFloat32(0,true).toFixed(2);
   ax = data.getFloat32(4,true).toFixed(2);
