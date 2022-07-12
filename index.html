@@ -18,7 +18,7 @@ Copyright 2017-2020 JellyWare Inc. All Rights Reserved.
 <body>
 <div class="container">
     <div class="title margin">
-        <p id="title">power measurement</p>
+        <p id="title">Power measurement</p>
         <p id="subtitle">power graph</p>
     </div>
 
@@ -145,6 +145,7 @@ ble.onRead = function (data, uuid){
   console.log("gx : ",data.getFloat32(12,true));
   console.log("gy : ",data.getFloat32(16,true));
   console.log("gz : ",data.getFloat32(20,true));*/
+  alert("read");
   if (cnt==0){
     startTime = performance.now()
     cnt +=1;
